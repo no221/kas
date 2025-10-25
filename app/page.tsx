@@ -1,13 +1,12 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
-import { Student, Payment, Expense, Summary } from '@/types'
-import { getCurrentWeekRange } from '@/lib/utils'
+import { supabase } from '../lib/supabase'
+import { Student, Payment, Expense, Summary } from '../types'
+import { getCurrentWeekRange } from '../lib/utils'
 import Dashboard from './components/Dashboard'
 import StudentList from './components/StudentList'
 import ExpenseManager from './components/ExpenseManager'
 import CopyReport from './components/CopyReport'
-
 export default function KasKelas() {
   const [students, setStudents] = useState<Student[]>([])
   const [payments, setPayments] = useState<Payment[]>([])
